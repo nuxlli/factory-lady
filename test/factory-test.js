@@ -24,7 +24,7 @@ describe('Factory', function() {
     var nameCounter = 1;
 
     Factory.define('person', Person, {
-      name: function(cb) { cb("person " + nameCounter++); }
+      name: function(model, cb) { cb("person " + nameCounter++); }
     , age: 25
     , job: Factory.assoc('job')
     , title: Factory.assoc('job', 'title')
